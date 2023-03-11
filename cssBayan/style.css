@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: "Railway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightyellow;
+}
+
+.accordion {
+  color: blueviolet;
+  transition: all 500ms;
+}
+
+.accordion:hover {
+  cursor: pointer;
+  color: black;
+  transition: all 500ms;
+}
+
+.bayan-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 700px;
+  border-bottom: 1px solid grey;
+  height: fit-content;
+}
+
+.bayan-wrapper:first-child {
+  border-top: 1px solid grey;
+}
+
+.bayan-wrapper:last-child {
+  border: none;
+}
+
+.bayan-wrapper:hover {
+  cursor: pointer;
+}
+
+.bayan-wrapper:hover > .meme-img {
+  opacity: 1;
+  height: fit-content;
+  transition: all 1s ease;
+}
+
+.meme-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.meme-img {
+  opacity: 0;
+  height: 0;
+  transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  margin: 15px;
+  transition: all 1s ease;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ .meme-img {
+  opacity: 1;
+  height: fit-content;
+  transition: all 500ms ease;
+}
+
+input:checked ~ .meme-header {
+  color: black;
+}
+
+input:checked ~ .meme-header .icon {
+  transform: rotate(45deg);
+}
