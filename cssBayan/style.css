@@ -71,13 +71,12 @@ body {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  font-size: 1.6em;
 }
 
 img {
-  width: 500px;
-  height: 500px;
+  width: 70%;
+  height: 70%;
   margin: 15px;
   transition: all 1s ease;
 }
@@ -98,4 +97,41 @@ input:checked ~ .meme-header {
 
 input:checked ~ .meme-header .icon {
   transform: rotate(45deg);
+}
+
+@media (max-width: 850px) {
+  h1,
+  .meme-text,
+  .icon {
+    font-size: 1em;
+  }
+
+  .bayan-wrapper {
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 570px) {
+  h1,
+  .meme-text,
+  .icon {
+    font-size: 0.8em;
+  }
+
+  .bayan-wrapper {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1,
+  .meme-text,
+  .icon {
+    font-size: 0.6em;
+  }
+
+  .bayan-wrapper {
+    width: 300px;
+  }
 }
